@@ -1,0 +1,850 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/27/2026 12:00:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ADVSQL"
+  DTS:CreatorName="Mason Romdenne"
+  DTS:Description="Week 5 - extracts AdventureWorks2019.HumanResources.Employee to EmployeeExtract_yyyymmdd.csv"
+  DTS:DTSID="{91895A0A-8E5E-4CBB-A509-4D8F88057B6D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="EmployeeExtract"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{6CC19C56-B3FC-4139-A37C-DE79AE9B94ED}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AdventureWorks]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AC4EC72F-9F8E-4330-A0E2-77963030D0D5}"
+      DTS:ObjectName="AdventureWorks">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::ConnectionString]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EmployeeExtractFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E1414743-4C64-4B9E-96C2-EB28FE7C7F52}"
+      DTS:ObjectName="EmployeeExtractFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FullFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Public\Documents\EmployeeExtract_20260927.csv">
+          <DTS:FlatFileColumns>
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="3"
+            DTS:TextQualified="False"
+            DTS:ObjectName="BusinessEntityID"
+            DTS:DTSID="{CC9FB726-A42C-4977-98B3-FE059DFE207F}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="15"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="NationalIDNumber"
+            DTS:DTSID="{4246E5F6-6893-4AAC-AC80-AF150644240A}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="256"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="LoginID"
+            DTS:DTSID="{7B2494A0-298B-4345-8139-69A3A87CF5DC}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="4000"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="OrganizationNode"
+            DTS:DTSID="{112BC550-BECA-43DA-81CB-D47E30F49CC4}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="2"
+            DTS:TextQualified="False"
+            DTS:ObjectName="OrganizationLevel"
+            DTS:DTSID="{47751FAB-4909-4391-8FD9-B5E42399469A}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="50"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="JobTitle"
+            DTS:DTSID="{0AB0EEC3-DBAC-4F2D-ACC6-22506E752684}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="133"
+            DTS:TextQualified="False"
+            DTS:ObjectName="BirthDate"
+            DTS:DTSID="{33939024-84E9-4715-B02E-B121D9548D98}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="1"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="MaritalStatus"
+            DTS:DTSID="{36683FA3-CB3D-4298-BFC5-EEFC8643C937}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_" DTS:MaximumWidth="1"
+            DTS:DataType="130"
+            DTS:TextQualified="True"
+            DTS:ObjectName="Gender"
+            DTS:DTSID="{ED483DB6-F90C-40D1-ACB6-A27F357437FE}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="133"
+            DTS:TextQualified="False"
+            DTS:ObjectName="HireDate"
+            DTS:DTSID="{F7750522-9EBD-4AD0-99E5-9BE850CD19A3}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="11"
+            DTS:TextQualified="False"
+            DTS:ObjectName="SalariedFlag"
+            DTS:DTSID="{F6DF8CFE-E851-4430-9288-EE8F7D12810E}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="2"
+            DTS:TextQualified="False"
+            DTS:ObjectName="VacationHours"
+            DTS:DTSID="{96159010-F1F8-40F4-8D34-464AB0617B67}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="2"
+            DTS:TextQualified="False"
+            DTS:ObjectName="SickLeaveHours"
+            DTS:DTSID="{4336C7C7-38A5-441C-BD64-FDF5B4017E65}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="11"
+            DTS:TextQualified="False"
+            DTS:ObjectName="CurrentFlag"
+            DTS:DTSID="{7A6B99B1-F72B-4691-8F91-0EC5F2068773}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x002C_"
+            DTS:DataType="72"
+            DTS:TextQualified="False"
+            DTS:ObjectName="rowguid"
+            DTS:DTSID="{E1F86315-0065-4D77-91BC-4DFAF5DEC36E}"
+            DTS:CreationName="" />
+          <DTS:FlatFileColumn
+            DTS:ColumnType="Delimited"
+            DTS:ColumnDelimiter="_x000D__x000A_"
+            DTS:DataType="135"
+            DTS:TextQualified="False"
+            DTS:ObjectName="ModifiedDate"
+            DTS:DTSID="{EF3A9171-05D4-4C7D-8828-144E10A160A5}"
+            DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{35521FA2-F307-4CFA-87CA-876C4E562C5A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ServerName">
+      <DTS:VariableValue
+        DTS:DataType="8">localhost</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{141C4326-7115-4FDA-827F-BCCBEB0F3210}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DatabaseName">
+      <DTS:VariableValue
+        DTS:DataType="8">AdventureWorks2019</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E78D97D3-FB21-4BEB-A498-39D03EDA109F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="OleDbProvider">
+      <DTS:VariableValue
+        DTS:DataType="8">MSOLEDBSQL.1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{86923928-6E3E-4DCF-828B-97064A3674A7}" DTS:EvaluateAsExpression="True" DTS:Expression='"Data Source=" + @[User::ServerName] + ";Initial Catalog=" + @[User::DatabaseName] + ";Provider=" + @[User::OleDbProvider] + ";Integrated Security=SSPI;Auto Translate=False;"'
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ConnectionString">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5A40EA66-B957-4A6A-A2AB-5001BD7436B7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="OutputFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Public\Documents</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{21CFC626-A733-4728-9498-0FB716BCC100}" DTS:EvaluateAsExpression="True" DTS:Expression='"EmployeeExtract_" + (DT_WSTR, 4) YEAR(GETDATE()) + RIGHT("0" + (DT_WSTR, 2) MONTH(GETDATE()), 2) + RIGHT("0" + (DT_WSTR, 2) DAY(GETDATE()), 2) + ".csv"'
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">EmployeeExtract_20260927.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4FDC5397-3E21-4EB1-A601-F60326D95730}" DTS:EvaluateAsExpression="True" DTS:Expression='@[User::OutputFolder] + "\\" + @[User::FileName]'
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FullFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Public\Documents\EmployeeExtract_20260927.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B41FAE9F-2E19-4586-8962-D787AAA60980}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceQuery">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT BusinessEntityID, NationalIDNumber, LoginID, OrganizationNode.ToString() AS OrganizationNode, OrganizationLevel, JobTitle, BirthDate, MaritalStatus, Gender, HireDate, SalariedFlag, VacationHours, SickLeaveHours, CurrentFlag, rowguid, ModifiedDate FROM HumanResources.Employee ORDER BY BusinessEntityID;</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Employee Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Reads HumanResources.Employee and writes it to EmployeeExtract_yyyymmdd.csv"
+      DTS:DTSID="{F4502DD1-538D-49E8-8B4D-09B37A9C5511}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Employee Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Employee Table\Employee Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Employee Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property dataType="System.Int32" name="CommandTimeout">0</property>
+                <property dataType="System.String" name="OpenRowset"></property>
+                <property dataType="System.String" name="OpenRowsetVariable"></property>
+                <property dataType="System.String" name="SqlCommand" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property dataType="System.String" name="SqlCommandVariable">User::SourceQuery</property>
+                <property dataType="System.Int32" name="DefaultCodePage">1252</property>
+                <property dataType="System.Boolean" name="AlwaysUseDefaultCodePage">false</property>
+                <property dataType="System.Int32" name="AccessMode" typeConverter="AccessMode">3</property>
+                <property dataType="System.String" name="ParameterMapping"></property>
+              </properties>
+              <connections>
+              <connection
+                refId="Package\Extract Employee Table\Employee Source.Connections[OleDbConnection]"
+                connectionManagerID="Package.ConnectionManagers[AdventureWorks]"
+                connectionManagerRefId="Package.ConnectionManagers[AdventureWorks]"
+                name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                    dataType="i4"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]"
+                    name="BusinessEntityID"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[NationalIDNumber]"
+                    dataType="wstr" length="15"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[NationalIDNumber]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[NationalIDNumber]"
+                    name="NationalIDNumber"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[LoginID]"
+                    dataType="wstr" length="256"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[LoginID]"
+                    name="LoginID"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationNode]"
+                    dataType="wstr" length="4000"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[OrganizationNode]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationNode]"
+                    name="OrganizationNode"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationLevel]"
+                    dataType="i2"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[OrganizationLevel]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationLevel]"
+                    name="OrganizationLevel"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                    dataType="wstr" length="50"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[JobTitle]"
+                    name="JobTitle"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                    dataType="dbDate"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BirthDate]"
+                    name="BirthDate"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[MaritalStatus]"
+                    dataType="wstr" length="1"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[MaritalStatus]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[MaritalStatus]"
+                    name="MaritalStatus"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                    dataType="wstr" length="1"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[Gender]"
+                    name="Gender"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[HireDate]"
+                    dataType="dbDate"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[HireDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[HireDate]"
+                    name="HireDate"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SalariedFlag]"
+                    dataType="bool"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[SalariedFlag]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SalariedFlag]"
+                    name="SalariedFlag"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[VacationHours]"
+                    dataType="i2"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[VacationHours]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[VacationHours]"
+                    name="VacationHours"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SickLeaveHours]"
+                    dataType="i2"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[SickLeaveHours]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SickLeaveHours]"
+                    name="SickLeaveHours"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[CurrentFlag]"
+                    dataType="bool"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[CurrentFlag]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[CurrentFlag]"
+                    name="CurrentFlag"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                    dataType="guid"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                    name="rowguid"
+                    truncationRowDisposition="FailComponent" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                    dataType="dbTimeStamp"
+                    errorOrTruncationOperation="Conversion"
+                    errorRowDisposition="FailComponent"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                    name="ModifiedDate"
+                    truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[BusinessEntityID]"
+                    dataType="i4"
+                    name="BusinessEntityID" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[NationalIDNumber]"
+                    dataType="wstr" length="15"
+                    name="NationalIDNumber" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
+                    dataType="wstr" length="256"
+                    name="LoginID" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[OrganizationNode]"
+                    dataType="wstr" length="4000"
+                    name="OrganizationNode" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[OrganizationLevel]"
+                    dataType="i2"
+                    name="OrganizationLevel" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[JobTitle]"
+                    dataType="wstr" length="50"
+                    name="JobTitle" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[BirthDate]"
+                    dataType="dbDate"
+                    name="BirthDate" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[MaritalStatus]"
+                    dataType="wstr" length="1"
+                    name="MaritalStatus" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                    dataType="wstr" length="1"
+                    name="Gender" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[HireDate]"
+                    dataType="dbDate"
+                    name="HireDate" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[SalariedFlag]"
+                    dataType="bool"
+                    name="SalariedFlag" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[VacationHours]"
+                    dataType="i2"
+                    name="VacationHours" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[SickLeaveHours]"
+                    dataType="i2"
+                    name="SickLeaveHours" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[CurrentFlag]"
+                    dataType="bool"
+                    name="CurrentFlag" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                    dataType="guid"
+                    name="rowguid" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                    dataType="dbTimeStamp"
+                    name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                    dataType="i4"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[BusinessEntityID]"
+                    name="BusinessEntityID" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[NationalIDNumber]"
+                    dataType="wstr" length="15"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[NationalIDNumber]"
+                    name="NationalIDNumber" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[LoginID]"
+                    dataType="wstr" length="256"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[LoginID]"
+                    name="LoginID" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[OrganizationNode]"
+                    dataType="wstr" length="4000"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[OrganizationNode]"
+                    name="OrganizationNode" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[OrganizationLevel]"
+                    dataType="i2"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[OrganizationLevel]"
+                    name="OrganizationLevel" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                    dataType="wstr" length="50"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[JobTitle]"
+                    name="JobTitle" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                    dataType="dbDate"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[BirthDate]"
+                    name="BirthDate" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[MaritalStatus]"
+                    dataType="wstr" length="1"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[MaritalStatus]"
+                    name="MaritalStatus" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                    dataType="wstr" length="1"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                    name="Gender" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[HireDate]"
+                    dataType="dbDate"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[HireDate]"
+                    name="HireDate" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[SalariedFlag]"
+                    dataType="bool"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[SalariedFlag]"
+                    name="SalariedFlag" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[VacationHours]"
+                    dataType="i2"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[VacationHours]"
+                    name="VacationHours" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[SickLeaveHours]"
+                    dataType="i2"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[SickLeaveHours]"
+                    name="SickLeaveHours" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[CurrentFlag]"
+                    dataType="bool"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[CurrentFlag]"
+                    name="CurrentFlag" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                    dataType="guid"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                    name="rowguid" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                    dataType="dbTimeStamp"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                    name="ModifiedDate" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                    dataType="i4"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                    name="ErrorCode"
+                    specialFlags="1" />
+                  <outputColumn
+                    refId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                    dataType="i4"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                    name="ErrorColumn"
+                    specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Employee Table\Employee CSV File"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Employee CSV File"
+              version="1">
+              <properties>
+                <property dataType="System.Boolean" name="Overwrite">true</property>
+                <property dataType="System.Null" name="Header" />
+                <property dataType="System.Boolean" name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+              <connection
+                refId="Package\Extract Employee Table\Employee CSV File.Connections[FlatFileConnection]"
+                connectionManagerID="Package.ConnectionManagers[EmployeeExtractFile]"
+                connectionManagerRefId="Package.ConnectionManagers[EmployeeExtractFile]"
+                name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[BusinessEntityID]"
+                    cachedDataType="i4"
+                    cachedName="BusinessEntityID"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BusinessEntityID]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[NationalIDNumber]"
+                    cachedDataType="wstr" cachedLength="15"
+                    cachedName="NationalIDNumber"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[NationalIDNumber]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[NationalIDNumber]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[LoginID]"
+                    cachedDataType="wstr" cachedLength="256"
+                    cachedName="LoginID"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[LoginID]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[LoginID]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[OrganizationNode]"
+                    cachedDataType="wstr" cachedLength="4000"
+                    cachedName="OrganizationNode"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[OrganizationNode]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationNode]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[OrganizationLevel]"
+                    cachedDataType="i2"
+                    cachedName="OrganizationLevel"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[OrganizationLevel]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[OrganizationLevel]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[JobTitle]"
+                    cachedDataType="wstr" cachedLength="50"
+                    cachedName="JobTitle"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[JobTitle]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[JobTitle]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[BirthDate]"
+                    cachedDataType="dbDate"
+                    cachedName="BirthDate"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[BirthDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[BirthDate]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[MaritalStatus]"
+                    cachedDataType="wstr" cachedLength="1"
+                    cachedName="MaritalStatus"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[MaritalStatus]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[MaritalStatus]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[Gender]"
+                    cachedDataType="wstr" cachedLength="1"
+                    cachedName="Gender"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[Gender]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[HireDate]"
+                    cachedDataType="dbDate"
+                    cachedName="HireDate"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[HireDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[HireDate]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[SalariedFlag]"
+                    cachedDataType="bool"
+                    cachedName="SalariedFlag"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[SalariedFlag]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SalariedFlag]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[VacationHours]"
+                    cachedDataType="i2"
+                    cachedName="VacationHours"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[VacationHours]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[VacationHours]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[SickLeaveHours]"
+                    cachedDataType="i2"
+                    cachedName="SickLeaveHours"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[SickLeaveHours]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[SickLeaveHours]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[CurrentFlag]"
+                    cachedDataType="bool"
+                    cachedName="CurrentFlag"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[CurrentFlag]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[CurrentFlag]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[rowguid]"
+                    cachedDataType="guid"
+                    cachedName="rowguid"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[rowguid]" />
+                  <inputColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].Columns[ModifiedDate]"
+                    cachedDataType="dbTimeStamp"
+                    cachedName="ModifiedDate"
+                    externalMetadataColumnId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                    lineageId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[BusinessEntityID]"
+                    dataType="i4"
+                    name="BusinessEntityID" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[NationalIDNumber]"
+                    dataType="wstr" length="15"
+                    name="NationalIDNumber" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[LoginID]"
+                    dataType="wstr" length="256"
+                    name="LoginID" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[OrganizationNode]"
+                    dataType="wstr" length="4000"
+                    name="OrganizationNode" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[OrganizationLevel]"
+                    dataType="i2"
+                    name="OrganizationLevel" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[JobTitle]"
+                    dataType="wstr" length="50"
+                    name="JobTitle" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[BirthDate]"
+                    dataType="dbDate"
+                    name="BirthDate" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[MaritalStatus]"
+                    dataType="wstr" length="1"
+                    name="MaritalStatus" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[Gender]"
+                    dataType="wstr" length="1"
+                    name="Gender" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[HireDate]"
+                    dataType="dbDate"
+                    name="HireDate" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[SalariedFlag]"
+                    dataType="bool"
+                    name="SalariedFlag" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[VacationHours]"
+                    dataType="i2"
+                    name="VacationHours" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[SickLeaveHours]"
+                    dataType="i2"
+                    name="SickLeaveHours" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[CurrentFlag]"
+                    dataType="bool"
+                    name="CurrentFlag" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[rowguid]"
+                    dataType="guid"
+                    name="rowguid" />
+                  <externalMetadataColumn
+                    refId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                    dataType="dbTimeStamp"
+                    name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Employee Table.Paths[OLE DB Source Output]"
+              endId="Package\Extract Employee Table\Employee CSV File.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Employee Table\Employee Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout Size="210,42" Id="Package\Extract Employee Table" TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Employee Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout Size="170,42" Id="Package\Extract Employee Table\Employee Source" TopLeft="60,40" />
+        <NodeLayout Size="170,42" Id="Package\Extract Employee Table\Employee CSV File" TopLeft="60,160" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

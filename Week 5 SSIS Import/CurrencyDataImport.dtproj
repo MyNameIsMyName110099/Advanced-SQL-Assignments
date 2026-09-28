@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DeploymentModel>Project</DeploymentModel>
+  <ProductVersion>15.0.2000.180</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <Database>
+    <Name>CurrencyDataImport.database</Name>
+    <FullPath>CurrencyDataImport.database</FullPath>
+  </Database>
+  <DataSources />
+  <DataSourceViews />
+  <DeploymentModelSpecificContent>
+    <Manifest>
+      <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+        <SSIS:Properties>
+          <SSIS:Property SSIS:Name="ID">{4978E90F-0A7A-4884-AB8A-E767F0DC5D52}</SSIS:Property>
+          <SSIS:Property SSIS:Name="Name">CurrencyDataImport</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionComments"></SSIS:Property>
+          <SSIS:Property SSIS:Name="CreationDate">2026-09-27T12:00:00</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorName">Mason Romdenne</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorComputerName">ADVSQL</SSIS:Property>
+          <SSIS:Property SSIS:Name="Description"></SSIS:Property>
+          <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
+        </SSIS:Properties>
+        <SSIS:Packages>
+          <SSIS:Package SSIS:Name="CurrencyDataImport.dtsx" SSIS:EntryPoint="1" />
+        </SSIS:Packages>
+        <SSIS:ConnectionManagers />
+        <SSIS:DeploymentInfo>
+          <SSIS:ProjectConnectionParameters />
+          <SSIS:PackageInfo>
+            <SSIS:PackageMetaData SSIS:Name="CurrencyDataImport.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{61CACE73-D407-4E10-86F6-5A409E731859}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">CurrencyDataImport</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments"></SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EED07FB9-758A-4EC0-9551-0A54FC459D3E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description"></SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+          </SSIS:PackageInfo>
+        </SSIS:DeploymentInfo>
+      </SSIS:Project>
+    </Manifest>
+  </DeploymentModelSpecificContent>
+  <ConfigurationManager>
+    <Configurations>
+      <Configuration>
+        <Name>Development</Name>
+        <Options>
+          <OutputPath>bin</OutputPath>
+          <ConnectionMappings />
+          <ConnectionProviderMappings />
+          <ConnectionSecurityMappings />
+          <DatabaseStorageLocations />
+          <TargetServerVersion>SQLServer2019</TargetServerVersion>
+          <ParameterConfigurationValues />
+        </Options>
+      </Configuration>
+    </Configurations>
+  </ConfigurationManager>
+</Project>

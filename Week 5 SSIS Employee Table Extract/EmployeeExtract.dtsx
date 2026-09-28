@@ -5,8 +5,8 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ADVSQL"
   DTS:CreatorName="Mason Romdenne"
-  DTS:Description="Week 5 - extracts AdventureWorks2019.HumanResources.Employee to EmployeeExtract_yyyymmdd.csv"
-  DTS:DTSID="{91895A0A-8E5E-4CBB-A509-4D8F88057B6D}"
+  DTS:Description="Week 5 - extracts AdventureWorks2022.HumanResources.Employee to EmployeeExtract_yyyymmdd.csv"
+  DTS:DTSID="{D21FA0F8-5F51-48AF-9C0C-BB42C3E79619}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1033"
@@ -14,26 +14,26 @@
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{6CC19C56-B3FC-4139-A37C-DE79AE9B94ED}">
+  DTS:VersionGUID="{B3BD3E0F-2666-4570-955E-2A75CDAD3399}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[AdventureWorks]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{AC4EC72F-9F8E-4330-A0E2-77963030D0D5}"
+      DTS:DTSID="{9529C160-C3E1-4788-A894-E233FF9A6C6C}"
       DTS:ObjectName="AdventureWorks">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::ConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[EmployeeExtractFile]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{E1414743-4C64-4B9E-96C2-EB28FE7C7F52}"
+      DTS:DTSID="{8CBBFCE4-0332-43E1-8448-97BECF1D8630}"
       DTS:ObjectName="EmployeeExtractFile">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::FullFilePath]</DTS:PropertyExpression>
@@ -54,7 +54,7 @@
             DTS:DataType="3"
             DTS:TextQualified="False"
             DTS:ObjectName="BusinessEntityID"
-            DTS:DTSID="{CC9FB726-A42C-4977-98B3-FE059DFE207F}"
+            DTS:DTSID="{78F8A36F-D6B1-4B69-A746-3DE8579478FD}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -62,7 +62,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="NationalIDNumber"
-            DTS:DTSID="{4246E5F6-6893-4AAC-AC80-AF150644240A}"
+            DTS:DTSID="{72C39E0D-0669-4F20-8E70-E371EEDA6369}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -70,7 +70,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="LoginID"
-            DTS:DTSID="{7B2494A0-298B-4345-8139-69A3A87CF5DC}"
+            DTS:DTSID="{65068DEF-6DA2-4535-978D-B7AE13CD04EB}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="OrganizationNode"
-            DTS:DTSID="{112BC550-BECA-43DA-81CB-D47E30F49CC4}"
+            DTS:DTSID="{83FFEFF2-6769-4669-8994-57C84273A6BE}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
             DTS:DataType="2"
             DTS:TextQualified="False"
             DTS:ObjectName="OrganizationLevel"
-            DTS:DTSID="{47751FAB-4909-4391-8FD9-B5E42399469A}"
+            DTS:DTSID="{7B9781F0-E017-43CC-A749-AE7CF9291918}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -94,7 +94,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="JobTitle"
-            DTS:DTSID="{0AB0EEC3-DBAC-4F2D-ACC6-22506E752684}"
+            DTS:DTSID="{B79256F8-B6C6-45EB-8CD0-AD7D3BBCB683}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
             DTS:DataType="133"
             DTS:TextQualified="False"
             DTS:ObjectName="BirthDate"
-            DTS:DTSID="{33939024-84E9-4715-B02E-B121D9548D98}"
+            DTS:DTSID="{C0C3A240-51EA-4D5A-8CB8-40831D2AB3A0}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="MaritalStatus"
-            DTS:DTSID="{36683FA3-CB3D-4298-BFC5-EEFC8643C937}"
+            DTS:DTSID="{6FA022E4-A735-413B-8D3B-88E56B913A9A}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
             DTS:DataType="130"
             DTS:TextQualified="True"
             DTS:ObjectName="Gender"
-            DTS:DTSID="{ED483DB6-F90C-40D1-ACB6-A27F357437FE}"
+            DTS:DTSID="{8D054B71-8B41-41A0-B929-B5EF72E1E059}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
             DTS:DataType="133"
             DTS:TextQualified="False"
             DTS:ObjectName="HireDate"
-            DTS:DTSID="{F7750522-9EBD-4AD0-99E5-9BE850CD19A3}"
+            DTS:DTSID="{80ACB072-6A0E-42D0-B858-6D85987B261F}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -134,7 +134,7 @@
             DTS:DataType="11"
             DTS:TextQualified="False"
             DTS:ObjectName="SalariedFlag"
-            DTS:DTSID="{F6DF8CFE-E851-4430-9288-EE8F7D12810E}"
+            DTS:DTSID="{29DC2734-E008-4ADF-8967-65754F291C37}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -142,7 +142,7 @@
             DTS:DataType="2"
             DTS:TextQualified="False"
             DTS:ObjectName="VacationHours"
-            DTS:DTSID="{96159010-F1F8-40F4-8D34-464AB0617B67}"
+            DTS:DTSID="{4B185231-3518-45BB-B112-827A50C62C73}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
             DTS:DataType="2"
             DTS:TextQualified="False"
             DTS:ObjectName="SickLeaveHours"
-            DTS:DTSID="{4336C7C7-38A5-441C-BD64-FDF5B4017E65}"
+            DTS:DTSID="{F3FEAD99-88B6-425B-82AB-A2410EFBA63D}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -158,7 +158,7 @@
             DTS:DataType="11"
             DTS:TextQualified="False"
             DTS:ObjectName="CurrentFlag"
-            DTS:DTSID="{7A6B99B1-F72B-4691-8F91-0EC5F2068773}"
+            DTS:DTSID="{DDF8A403-3DC9-47DB-82B0-A6D95402BE3E}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -166,7 +166,7 @@
             DTS:DataType="72"
             DTS:TextQualified="False"
             DTS:ObjectName="rowguid"
-            DTS:DTSID="{E1F86315-0065-4D77-91BC-4DFAF5DEC36E}"
+            DTS:DTSID="{89DF71F6-ADE1-43FE-9677-9382B982F6F8}"
             DTS:CreationName="" />
           <DTS:FlatFileColumn
             DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
             DTS:DataType="135"
             DTS:TextQualified="False"
             DTS:ObjectName="ModifiedDate"
-            DTS:DTSID="{EF3A9171-05D4-4C7D-8828-144E10A160A5}"
+            DTS:DTSID="{8BB64A2B-5F4A-44C9-9E33-E256799D6E2F}"
             DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -184,7 +184,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{35521FA2-F307-4CFA-87CA-876C4E562C5A}"
+      DTS:DTSID="{D3C0AB4E-16CC-41E6-B9C3-F7D079A703D6}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ServerName">
@@ -193,16 +193,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{141C4326-7115-4FDA-827F-BCCBEB0F3210}"
+      DTS:DTSID="{C9FA7CE3-AE16-42EE-990D-CA4C3CE8A4E8}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="DatabaseName">
       <DTS:VariableValue
-        DTS:DataType="8">AdventureWorks2019</DTS:VariableValue>
+        DTS:DataType="8">AdventureWorks2022</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E78D97D3-FB21-4BEB-A498-39D03EDA109F}"
+      DTS:DTSID="{23F136C9-FAA3-4712-B3C9-355E12756CBD}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="OleDbProvider">
@@ -211,16 +211,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{86923928-6E3E-4DCF-828B-97064A3674A7}" DTS:EvaluateAsExpression="True" DTS:Expression='"Data Source=" + @[User::ServerName] + ";Initial Catalog=" + @[User::DatabaseName] + ";Provider=" + @[User::OleDbProvider] + ";Integrated Security=SSPI;Auto Translate=False;"'
+      DTS:DTSID="{A493381B-39C6-41D2-9263-7B494A42ADB8}" DTS:EvaluateAsExpression="True" DTS:Expression='"Data Source=" + @[User::ServerName] + ";Initial Catalog=" + @[User::DatabaseName] + ";Provider=" + @[User::OleDbProvider] + ";Integrated Security=SSPI;Auto Translate=False;"'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;</DTS:VariableValue>
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5A40EA66-B957-4A6A-A2AB-5001BD7436B7}"
+      DTS:DTSID="{50693DC5-6DAA-449C-94A6-9754099D4FF2}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="OutputFolder">
@@ -229,7 +229,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{21CFC626-A733-4728-9498-0FB716BCC100}" DTS:EvaluateAsExpression="True" DTS:Expression='"EmployeeExtract_" + (DT_WSTR, 4) YEAR(GETDATE()) + RIGHT("0" + (DT_WSTR, 2) MONTH(GETDATE()), 2) + RIGHT("0" + (DT_WSTR, 2) DAY(GETDATE()), 2) + ".csv"'
+      DTS:DTSID="{7EE8F279-D8FA-46B5-8008-181AC4645AE7}" DTS:EvaluateAsExpression="True" DTS:Expression='"EmployeeExtract_" + (DT_WSTR, 4) YEAR(GETDATE()) + RIGHT("0" + (DT_WSTR, 2) MONTH(GETDATE()), 2) + RIGHT("0" + (DT_WSTR, 2) DAY(GETDATE()), 2) + ".csv"'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FileName">
@@ -238,7 +238,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4FDC5397-3E21-4EB1-A601-F60326D95730}" DTS:EvaluateAsExpression="True" DTS:Expression='@[User::OutputFolder] + "\\" + @[User::FileName]'
+      DTS:DTSID="{ED466437-279A-4D3D-9313-6DE4D672B03C}" DTS:EvaluateAsExpression="True" DTS:Expression='@[User::OutputFolder] + "\\" + @[User::FileName]'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="FullFilePath">
@@ -247,7 +247,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{B41FAE9F-2E19-4586-8962-D787AAA60980}"
+      DTS:DTSID="{3BBA5F6A-2D7E-4950-B40E-878FCE85BBBB}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SourceQuery">
@@ -260,7 +260,7 @@
       DTS:refId="Package\Extract Employee Table"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Reads HumanResources.Employee and writes it to EmployeeExtract_yyyymmdd.csv"
-      DTS:DTSID="{F4502DD1-538D-49E8-8B4D-09B37A9C5511}"
+      DTS:DTSID="{6E6D74AA-380A-4802-AF8F-CD65A350FEAB}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Extract Employee Table"

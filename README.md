@@ -6,8 +6,8 @@ Mason Romdenne - NWTC Advanced SQL, Fall 2026
 
 | Folder | Package | What it does |
 |---|---|---|
-| [Week 5 SSIS Employee Table Extract](Week%205%20SSIS%20Employee%20Table%20Extract) | `EmployeeExtract.dtsx` | Extracts `AdventureWorks2019.HumanResources.Employee` to `EmployeeExtract_yyyymmdd.csv` |
-| [Week 5 SSIS Import](Week%205%20SSIS%20Import) | `CurrencyDataImport.dtsx` | Loads `SampleCurrencyData.txt` into `AdventureWorks2019.dbo.Week5_SSIS_Import` (table script: `Week5_SSIS_Import.sql`) |
+| [Week 5 SSIS Employee Table Extract](Week%205%20SSIS%20Employee%20Table%20Extract) | `EmployeeExtract.dtsx` | Extracts `AdventureWorks2022.HumanResources.Employee` to `EmployeeExtract_yyyymmdd.csv` |
+| [Week 5 SSIS Import](Week%205%20SSIS%20Import) | `CurrencyDataImport.dtsx` | Loads `SampleCurrencyData.txt` into `AdventureWorks2022.dbo.Week5_SSIS_Import` (table script: `Week5_SSIS_Import.sql`) |
 
 ### Running on another machine
 

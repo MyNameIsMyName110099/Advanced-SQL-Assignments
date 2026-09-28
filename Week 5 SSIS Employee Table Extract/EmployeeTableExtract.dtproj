@@ -13,7 +13,7 @@
     <Manifest>
       <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
-          <SSIS:Property SSIS:Name="ID">{44AF38B8-E932-4A2C-9F33-0137744640DE}</SSIS:Property>
+          <SSIS:Property SSIS:Name="ID">{5B9AF8CE-588A-431E-86D7-FC9E51F547D4}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">EmployeeTableExtract</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
@@ -34,13 +34,13 @@
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="EmployeeExtract.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{91895A0A-8E5E-4CBB-A509-4D8F88057B6D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{D21FA0F8-5F51-48AF-9C0C-BB42C3E79619}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">EmployeeExtract</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments"></SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6CC19C56-B3FC-4139-A37C-DE79AE9B94ED}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B3BD3E0F-2666-4570-955E-2A75CDAD3399}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description"></SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>

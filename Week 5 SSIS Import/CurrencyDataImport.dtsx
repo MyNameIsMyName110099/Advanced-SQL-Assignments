@@ -5,8 +5,8 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ADVSQL"
   DTS:CreatorName="Mason Romdenne"
-  DTS:Description="Week 5 - loads SampleCurrencyData.txt into AdventureWorks2019.dbo.Week5_SSIS_Import"
-  DTS:DTSID="{61CACE73-D407-4E10-86F6-5A409E731859}"
+  DTS:Description="Week 5 - loads SampleCurrencyData.txt into AdventureWorks2022.dbo.Week5_SSIS_Import"
+  DTS:DTSID="{C60E7162-94B7-4B1E-B4B7-1763EAB80ED9}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.180"
   DTS:LocaleID="1033"
@@ -14,26 +14,26 @@
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{EED07FB9-758A-4EC0-9551-0A54FC459D3E}">
+  DTS:VersionGUID="{F113B456-B2D3-4F0D-AF62-DD2B1C2C1421}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[AdventureWorks]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{86861B68-7DAA-4A5A-8000-33172345BF6F}"
+      DTS:DTSID="{89577260-65E4-4843-9D6C-F088631CC236}"
       DTS:ObjectName="AdventureWorks">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::ConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SampleCurrencyDataFile]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{851856FB-3A91-447B-8CE8-540134D4F628}"
+      DTS:DTSID="{3D3AFEF1-FF5F-4189-87E4-BBCB23F7732A}"
       DTS:ObjectName="SampleCurrencyDataFile">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::SourceFilePath]</DTS:PropertyExpression>
@@ -54,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="False"
               DTS:ObjectName="RawLine"
-              DTS:DTSID="{95463D67-1268-4A0E-A1D4-7EC4F0CBC92D}"
+              DTS:DTSID="{8B878C2E-9E48-45B3-8397-AA7C57546994}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -64,7 +64,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{74D4521C-BE5D-40AA-B0D7-4B712FF66E79}"
+      DTS:DTSID="{1C8B2408-67F8-4926-A643-F6B76CE46FB6}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ServerName">
@@ -73,16 +73,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A6C1A364-FEC0-484F-8A16-76CAAC229F1D}"
+      DTS:DTSID="{6B9D82DE-627C-4628-B6E7-1E14A100CE85}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="DatabaseName">
       <DTS:VariableValue
-        DTS:DataType="8">AdventureWorks2019</DTS:VariableValue>
+        DTS:DataType="8">AdventureWorks2022</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BFC55E1D-6BE0-4DD6-A207-EF91BDADF785}"
+      DTS:DTSID="{4FE3F751-8AD9-4730-8A26-2EE6E7BC3CDE}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="OleDbProvider">
@@ -91,16 +91,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{472F2EB5-AC15-4C48-8ED7-64E4B94A01A9}" DTS:EvaluateAsExpression="True" DTS:Expression='"Data Source=" + @[User::ServerName] + ";Initial Catalog=" + @[User::DatabaseName] + ";Provider=" + @[User::OleDbProvider] + ";Integrated Security=SSPI;Auto Translate=False;"'
+      DTS:DTSID="{BB6CD573-5158-4EAF-BD5E-03AE3C403198}" DTS:EvaluateAsExpression="True" DTS:Expression='"Data Source=" + @[User::ServerName] + ";Initial Catalog=" + @[User::DatabaseName] + ";Provider=" + @[User::OleDbProvider] + ";Integrated Security=SSPI;Auto Translate=False;"'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">Data Source=localhost;Initial Catalog=AdventureWorks2019;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;</DTS:VariableValue>
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=AdventureWorks2022;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{26710C0D-AFF1-442C-9770-232164467F05}"
+      DTS:DTSID="{4434E278-833A-4DD0-9DEB-B86A436E1A41}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SourceFolder">
@@ -109,7 +109,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{5BA72121-9713-4D0E-B4A2-C8B58BD31856}"
+      DTS:DTSID="{C8D232D4-9CC5-4B5C-9589-025D47C680C4}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SourceFileName">
@@ -118,7 +118,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{419DA5DA-411E-47D8-A1E8-144870D72E3B}" DTS:EvaluateAsExpression="True" DTS:Expression='@[User::SourceFolder] + "\\" + @[User::SourceFileName]'
+      DTS:DTSID="{0E8A0A2C-2933-43BB-9E54-4DABEC9C1105}" DTS:EvaluateAsExpression="True" DTS:Expression='@[User::SourceFolder] + "\\" + @[User::SourceFileName]'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SourceFilePath">
@@ -127,7 +127,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7DCBCF4C-BE05-4C06-A97D-4DEEF6D1F110}"
+      DTS:DTSID="{21D7C400-BBE0-4DB5-98C0-722D1D79D45F}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="TableName">
@@ -136,7 +136,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{0B46C5F1-6454-44C0-8793-FCE13AAD646F}" DTS:EvaluateAsExpression="True" DTS:Expression='"TRUNCATE TABLE " + @[User::TableName] + ";"'
+      DTS:DTSID="{7E3B2373-89A8-4372-9D2C-5378ACDCDCE0}" DTS:EvaluateAsExpression="True" DTS:Expression='"TRUNCATE TABLE " + @[User::TableName] + ";"'
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="TruncateTableSql">
@@ -145,7 +145,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{076461D3-BB87-467C-AED0-A51CD6CB6DC0}"
+      DTS:DTSID="{023DE7E1-BF8A-4348-8CF2-500A2072C610}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="AverageRateLength">
@@ -154,7 +154,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{4A835290-E903-491C-834B-07D62FFF224B}"
+      DTS:DTSID="{ED376B83-34C3-473F-83EB-0872DF41C450}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="CurrencyCodeLength">
@@ -167,7 +167,7 @@
       DTS:refId="Package\Clear Import Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Empties the import table so the package can be re-run without duplicating rows"
-      DTS:DTSID="{B79FDB5F-098B-4BC7-9F48-9183396FA4FF}"
+      DTS:DTSID="{44C76147-3383-4723-836D-5ABDD1A197A4}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear Import Table"
@@ -175,7 +175,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{86861B68-7DAA-4A5A-8000-33172345BF6F}"
+          SQLTask:Connection="{89577260-65E4-4843-9D6C-F088631CC236}"
           SQLTask:SqlStmtSourceType="Variable"
           SQLTask:SqlStatementSource="User::TruncateTableSql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -184,7 +184,7 @@
       DTS:refId="Package\Load Currency Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Loads SampleCurrencyData.txt into dbo.Week5_SSIS_Import"
-      DTS:DTSID="{E83B36DE-562D-46AB-9475-B7A538616DA1}"
+      DTS:DTSID="{F20F3662-AB85-4B9A-AE72-B7286C76548B}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load Currency Data"
@@ -550,7 +550,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{A0CF6763-6A22-4ED8-9F0B-B5AACFDEC080}"
+      DTS:DTSID="{87193F31-9906-49A1-811F-64FCFE280799}"
       DTS:From="Package\Clear Import Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"

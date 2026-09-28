@@ -13,7 +13,7 @@
     <Manifest>
       <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
-          <SSIS:Property SSIS:Name="ID">{4978E90F-0A7A-4884-AB8A-E767F0DC5D52}</SSIS:Property>
+          <SSIS:Property SSIS:Name="ID">{AEE30594-4FF5-4389-BDFF-68EC5EBA6D0E}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">CurrencyDataImport</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
@@ -34,13 +34,13 @@
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="CurrencyDataImport.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{61CACE73-D407-4E10-86F6-5A409E731859}</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{C60E7162-94B7-4B1E-B4B7-1763EAB80ED9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">CurrencyDataImport</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments"></SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EED07FB9-758A-4EC0-9551-0A54FC459D3E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F113B456-B2D3-4F0D-AF62-DD2B1C2C1421}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description"></SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>

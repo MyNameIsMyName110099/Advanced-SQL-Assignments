@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37411.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "APInvoiceDrillDown", "APInvoiceDrillDown\APInvoiceDrillDown.rptproj", "{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Debug|Default.ActiveCfg = Debug
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Debug|Default.Build.0 = Debug
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Debug|Default.Deploy.0 = Debug
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.DebugLocal|Default.Build.0 = DebugLocal
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Release|Default.ActiveCfg = Release
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Release|Default.Build.0 = Release
+		{F07DBAB0-5452-4D5B-8D07-D5F35D91E567}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8F3FEEE-D0B7-4106-BF2C-84F7385A24B8}
+	EndGlobalSection
+EndGlobal
